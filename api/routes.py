@@ -414,6 +414,14 @@ async def predict_solar(request: SolarPredictRequest):
     
     features_df = pd.DataFrame(features_list)
     
+    # Compute missing lag/rolling features required by XGBoost using GHI
+    features_df['lag_1'] = features_df['ghi'].shift(1).fillna(method='bfill').fillna(0)
+    features_df['lag_4'] = features_df['ghi'].shift(4).fillna(method='bfill').fillna(0)
+    features_df['lag_96'] = features_df['ghi'].shift(96).fillna(method='bfill').fillna(0)
+    features_df['roll_mean_4'] = features_df['ghi'].rolling(4, min_periods=1).mean().fillna(0)
+    features_df['roll_mean_16'] = features_df['ghi'].rolling(16, min_periods=1).mean().fillna(0)
+    features_df['roll_mean_96'] = features_df['ghi'].rolling(96, min_periods=1).mean().fillna(0)
+    
     # Note: SolarAIHybridModel currently expects 1 residual set at a time? 
     # Let's check wrapper.predict again. 
     # Wrapper.predict(features_df, recent_residuals)

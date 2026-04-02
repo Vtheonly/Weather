@@ -148,7 +148,7 @@ def render_fault_detection_page():
         for f in factories:
             node_status[f["factory_id"]] = {
                 "voltage": f["battery"]["voltage"],
-                "status": f["fault"]["class"]
+                "status": f["fault"]["fault_class"]
             }
             # For factories, their internal nodes are also monitored by the engine loosely
             # mapping them to the main status

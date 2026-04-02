@@ -100,7 +100,7 @@ class SolarDataGenerator:
         
         # Clean up
         final_cols = ['timestamp', 'ghi', 'temp', 'humidity', 'wind_speed', 
-                      'hour_sin', 'hour_cos', 'actual_power', 'xgb_pred', 'residual']
+                      'hour_sin', 'hour_cos', 'theoretical_power', 'actual_power', 'xgb_pred', 'residual']
         
         return df[final_cols].reset_index(drop=True)
 

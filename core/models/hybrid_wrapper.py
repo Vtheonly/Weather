@@ -74,7 +74,8 @@ class SolarAIHybridModel:
 
         # Stage 1: XGBoost
         # Ensure columns match model training
-        xgb_cols = ['ghi', 'temp', 'humidity', 'wind_speed', 'hour_sin', 'hour_cos']
+        xgb_cols = ['ghi', 'temp', 'humidity', 'wind_speed', 'hour_sin', 'hour_cos', 
+                    'lag_1', 'lag_4', 'lag_96', 'roll_mean_4', 'roll_mean_16', 'roll_mean_96']
         try:
             steps_input = features_df[xgb_cols]
             xgb_pred = self.xgb_model.predict(steps_input)[0]
