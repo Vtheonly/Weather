@@ -1,0 +1,34 @@
+# Algeria Renewable Energy Factories — Unified Dependencies
+# ==========================================================
+# Single source of truth for all Python dependencies.
+# Used by both the main app and the dc_microgrid_dwt engine.
+
+# Core web framework
+streamlit>=1.28.0
+
+# API Framework (Docker integration)
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+pydantic>=2.0.0
+
+# Data processing
+pandas>=2.0.0
+numpy>=1.24.0
+scipy>=1.10.0
+
+# Visualization
+plotly>=5.13.0
+altair>=4.0.0
+folium>=0.15.0
+streamlit-folium>=0.22.0
+branca>=0.7.0
+
+# DSP & Wavelet Analysis
+PyWavelets>=1.4.1
+
+# Configuration & Utilities
+PyYAML>=6.0
+requests>=2.31.0
+
+# C++ bindings (for DSP module build)
+pybind11>=2.11.0

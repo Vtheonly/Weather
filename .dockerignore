@@ -1,0 +1,28 @@
+# Ignore local virtual environments
+.venv/
+venv/
+env/
+venv_old/
+
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Engine-specific duplicates (already merged)
+api/dc_microgrid_dwt/venv/
+api/dc_microgrid_dwt/docker-compose.yml
+api/dc_microgrid_dwt/Dockerfile
+
+# Data and logs
+*.log
+api/dc_microgrid_dwt/logs/
+api/dc_microgrid_dwt/reports/
+
+# Git
+.git/
+.gitignore
+
+# OS files
+.DS_Store

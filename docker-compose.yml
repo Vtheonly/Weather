@@ -1,0 +1,85 @@
+
+services:
+  # ─── FastAPI Backend ─────────────────────────────────────────────────────────
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: api
+      network: host
+    container_name: weather-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./api/dc_microgrid_dwt/logs:/app/logs
+      - ./api/dc_microgrid_dwt/reports:/app/reports
+      - ./api/dc_microgrid_dwt/config:/app/dc_microgrid_dwt/config:ro
+    environment:
+      - PYTHONPATH=/app
+      - PYTHONUNBUFFERED=1
+      - API_HOST=0.0.0.0
+      - API_PORT=8000
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/v1/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 2G
+        reservations:
+          cpus: '0.5'
+          memory: 512M
+    networks:
+      - weather-network
+
+  # ─── Streamlit Frontend ─────────────────────────────────────────────────────
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: frontend
+      network: host
+    container_name: weather-frontend
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./config:/app/config:ro
+      - ./core:/app/core:ro
+      - ./ui:/app/ui:ro
+      - ./pklh5_NN_engine:/app/pklh5_NN_engine:ro
+    environment:
+      - PYTHONPATH=/app
+      - PYTHONUNBUFFERED=1
+      - STREAMLIT_SERVER_HEADLESS=true
+      - STREAMLIT_SERVER_PORT=8501
+      - STREAMLIT_SERVER_ADDRESS=0.0.0.0
+      - API_URL=http://api:8000
+    depends_on:
+      api:
+        condition: service_healthy
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 2G
+        reservations:
+          cpus: '0.5'
+          memory: 512M
+    networks:
+      - weather-network
+
+networks:
+  weather-network:
+    driver: bridge
