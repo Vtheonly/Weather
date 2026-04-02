@@ -2,6 +2,13 @@
 
 A unified platform combining an interactive Streamlit UI with a high-performance FastAPI back-end to visualize, forecast, and detect faults in renewable energy systems (solar and wind) across Algeria. The platform leverages heavy machine learning models, physics-based simulations, and a C++ Wavelet Transform engine for real-time DSP.
 
+## Prerequisites
+
+Before you begin, ensure you have the following installed on your machine:
+* **[Git](https://git-scm.com/downloads)**
+* **[Docker](https://docs.docker.com/get-docker/)**
+* **[Docker Compose](https://docs.docker.com/compose/install/)**
+
 ## 🚀 How to Launch
 
 The entire application relies on a microservice architecture and is designed to be run **exclusively through Docker Compose**. 
@@ -12,9 +19,16 @@ The entire application relies on a microservice architecture and is designed to 
 > 
 > **Do not cancel the build!** Once the heavy libraries are downloaded, Docker caches them. All your subsequent builds will finish in seconds.
 
-### 1. Build and Run the Application
+### 1. Clone the Repository
 
-From the root project directory, execute:
+```bash
+git clone https://github.com/Vtheonly/Weather.git
+cd Weather
+```
+
+### 2. Build and Run the Application
+
+Execute the following command to build the engine and start the containers in detached mode:
 
 ```bash
 docker compose up -d --build
