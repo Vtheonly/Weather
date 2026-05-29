@@ -10,9 +10,9 @@ try:
     from src.ui.system import start_system, stop_system
     from src.agents.processing.dsp_runner import DSPRunnerAgent
     from src.adapters.high_speed_loop import HighSpeedDetectionLoop
-    print("✅ All critical system modules imported successfully")
+    print(" All critical system modules imported successfully")
 except ImportError as e:
-    print(f"❌ Import failed: {e}")
+    print(f" Import failed: {e}")
     sys.exit(1)
 
 class TestSystemIntegrity(unittest.TestCase):
@@ -25,7 +25,7 @@ class TestSystemIntegrity(unittest.TestCase):
                 sample_rate=1000, ui_throttle=10
             ) 
             self.assertIsNotNone(hsl)
-            print("✅ HighSpeedDetectionLoop instantiated")
+            print(" HighSpeedDetectionLoop instantiated")
             
         except Exception as e:
             self.fail(f"Instantiation failed: {e}")

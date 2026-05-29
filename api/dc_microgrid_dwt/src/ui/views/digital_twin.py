@@ -14,7 +14,7 @@ def render_digital_twin():
     """Render the enhanced digital twin circuit schematic."""
     st.markdown("""
     <div class="page-header">
-        <h2>🏗️ Digital Twin — Circuit Schematic</h2>
+        <h2> Digital Twin — Circuit Schematic</h2>
         <p>Real-time electrical schematic with fault highlighting</p>
     </div>
     """, unsafe_allow_html=True)
@@ -44,7 +44,7 @@ def render_digital_twin():
     _render_dsp_stats()
 
     # Node details table
-    st.markdown("#### 📋 Node Status")
+    st.markdown("####  Node Status")
     _render_node_table(nodes)
 
 
@@ -70,7 +70,7 @@ def _build_schematic_html(nodes, circuit, fault_info):
             "0 0 10px #ffaa00" if is_warn else "0 0 8px #00e67644"
         )
         fault_badge = (
-            f'<div class="fault-badge">⚡ {fault_info.get("type", "")}</div>'
+            f'<div class="fault-badge"> {fault_info.get("type", "")}</div>'
             if is_fault else ""
         )
 
@@ -78,7 +78,7 @@ def _build_schematic_html(nodes, circuit, fault_info):
         <div class="bus-node" id="bus-{node_id}"
              style="left:{bus.x}px; top:{bus.y}px; border-color:{color};
                     box-shadow:{glow};">
-            <div class="bus-icon">{'⚡' if is_fault else ('🔌' if bus.type == 'Slack' else '◈')}</div>
+            <div class="bus-icon">{'' if is_fault else ('' if bus.type == 'Slack' else '◈')}</div>
             <div class="bus-name">{name}</div>
             <div class="bus-voltage" style="color:{color};">{v:.1f}V</div>
             {fault_badge}
@@ -114,7 +114,7 @@ def _build_schematic_html(nodes, circuit, fault_info):
     if fault_info.get("trip_active"):
         trip_banner = """
         <div class="trip-banner">
-            🔴 SYSTEM TRIP ACTIVE — Protective relay opened
+             SYSTEM TRIP ACTIVE — Protective relay opened
         </div>
         """
 
@@ -240,7 +240,7 @@ def _render_dsp_stats():
     dsp = st.session_state.get("dsp_pipeline")
 
     if hsl or dsp:
-        st.markdown("#### ⚙️ DSP Performance")
+        st.markdown("####  DSP Performance")
         cols = st.columns(4)
 
         if hsl:

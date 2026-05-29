@@ -18,13 +18,13 @@ from wpf_engine.models.architecture import build_differential_model
 from wpf_engine.core.evaluator import Evaluator
 
 def main():
-    print(f"🚀 Initializing HIGH-PERFORMANCE Engine (Batch Size: {Config.BATCH_SIZE})...")
+    print(f" Initializing HIGH-PERFORMANCE Engine (Batch Size: {Config.BATCH_SIZE})...")
 
     # Load & Process
     try:
         df = pd.read_csv(Config.DATA_PATH)
     except FileNotFoundError:
-        print("❌ Dataset not found.")
+        print(" Dataset not found.")
         return
 
     df = PhysicsEngine.engineer_features(df)
@@ -32,7 +32,7 @@ def main():
     df, scaler = manager.prepare_data(df)
 
     # Indices Logic
-    print("⚙️ Computing valid sequence indices...")
+    print(" Computing valid sequence indices...")
     groups = df.groupby('TurbID')
     valid_indices = []
     total_len = Config.LOOKBACK_STEPS + Config.FORECAST_STEPS
@@ -45,7 +45,7 @@ def main():
 
     valid_indices = np.array(valid_indices)
     np.random.shuffle(valid_indices)
-    print(f"✅ Found {len(valid_indices)} valid sequences.")
+    print(f" Found {len(valid_indices)} valid sequences.")
 
     # Split
     split_idx = int(len(valid_indices) * Config.TRAIN_TEST_SPLIT)
@@ -65,7 +65,7 @@ def main():
         ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=2, min_lr=1e-5)
     ]
 
-    print(f"🔥 Starting GPU Training (Batch Size {Config.BATCH_SIZE})...")
+    print(f" Starting GPU Training (Batch Size {Config.BATCH_SIZE})...")
 
     # --- KERAS 3 FIX: Removed 'workers' and 'use_multiprocessing' ---
     # The Vectorized Generator is fast enough to run on the main thread
@@ -79,7 +79,7 @@ def main():
     # Evaluate
     evaluator = Evaluator(model, scaler)
     metrics = evaluator.evaluate_and_plot(test_gen)
-    print("\n✅ Engine Run Complete.")
+    print("\n Engine Run Complete.")
 
 if __name__ == "__main__":
     main()

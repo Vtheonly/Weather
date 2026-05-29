@@ -245,7 +245,7 @@ class ReportGeneratorAgent(BaseAgent):
 </head>
 <body>
     <div class="header">
-        <h1>⚡ Fault Incident Report</h1>
+        <h1> Fault Incident Report</h1>
         <div class="meta">
             Report ID: {report.report_id}<br>
             Generated: {report.generated_at.strftime('%Y-%m-%d %H:%M:%S')}<br>
@@ -254,7 +254,7 @@ class ReportGeneratorAgent(BaseAgent):
     </div>
 
     <div class="section status-critical">
-        <h2>📊 Summary</h2>
+        <h2> Summary</h2>
         <div class="metric-grid">
             <div class="metric-card">
                 <div class="metric-value">{report.fault_type}</div>
@@ -272,7 +272,7 @@ class ReportGeneratorAgent(BaseAgent):
     </div>
 
     <div class="section">
-        <h2>🔬 AI Diagnosis History</h2>
+        <h2> AI Diagnosis History</h2>
         <table>
             <thead>
                 <tr>
@@ -289,7 +289,7 @@ class ReportGeneratorAgent(BaseAgent):
     </div>
 
     <div class="section">
-        <h2>💻 System Health at Fault</h2>
+        <h2> System Health at Fault</h2>
         <div class="metric-grid">
             <div class="metric-card">
                 <div class="metric-value">{health.get('cpu', 'N/A')}%</div>

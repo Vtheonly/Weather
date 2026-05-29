@@ -14,7 +14,7 @@ def render_fault_analysis():
     """Render the fault analysis page."""
     st.markdown("""
     <div class="page-header">
-        <h2>🔍 Fault Analysis</h2>
+        <h2> Fault Analysis</h2>
         <p>Detailed fault tracing, timeline, zone analysis, and per-component impact</p>
     </div>
     """, unsafe_allow_html=True)
@@ -23,11 +23,11 @@ def render_fault_analysis():
     _render_fault_summary()
 
     # --- Per-Component Voltage During Fault ---
-    st.markdown("#### 📊 Per-Component Voltage Traces")
+    st.markdown("####  Per-Component Voltage Traces")
     _render_per_node_traces()
 
     # --- Fault Event Timeline ---
-    st.markdown("#### 📅 Fault Event Log")
+    st.markdown("####  Fault Event Log")
     _render_fault_timeline()
 
 

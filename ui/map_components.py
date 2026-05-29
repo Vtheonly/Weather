@@ -140,9 +140,9 @@ def add_energy_projects_layer(m):
         
         # Status badge
         status_emoji = {
-            'operational': '✅',
-            'construction': '🚧',
-            'planned': '📋'
+            'operational': '',
+            'construction': '',
+            'planned': ''
         }
         
         popup_content = f"""
@@ -217,12 +217,12 @@ def add_forecast_visualization(m, month: int, forecast_data: dict):
             <div style='width: 300px'>
                 <h4 style='color: #2d8a3e'>{region_name} - {month}</h4>
                 <hr>
-                <p><b>☀️ Solar Forecast:</b></p>
+                <p><b> Solar Forecast:</b></p>
                 <ul>
                     <li>Daily: {region_forecast['solar_daily']:.1f} MWh</li>
                     <li>Monthly: {region_forecast['solar_monthly']:.1f} MWh</li>
                 </ul>
-                <p><b>💨 Wind Forecast:</b></p>
+                <p><b> Wind Forecast:</b></p>
                 <ul>
                     <li>Daily: {region_forecast['wind_daily']:.1f} MWh</li>
                     <li>Monthly: {region_forecast['wind_monthly']:.1f} MWh</li>

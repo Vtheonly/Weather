@@ -88,13 +88,13 @@ def render_dashboard():
     """Render the main dashboard."""
     
     # Application header
-    st.title("🇩🇿 Algeria Renewable Energy Forecasting Dashboard")
+    st.title(" Algeria Renewable Energy Forecasting Dashboard")
     st.markdown("""
     **Interactive map and forecasting system for solar and wind energy production across Algeria**
     """)
     
     # Sidebar
-    st.sidebar.header("⚙️ Dashboard Controls")
+    st.sidebar.header(" Dashboard Controls")
     
     # Navigation
     page = st.sidebar.radio("Navigation", ["Map Overview", "Solar AI Simulator", "Wind AI Simulator", "Fault Detector"])
@@ -124,7 +124,7 @@ def render_map_page():
     )
     
     # Map layer controls
-    st.sidebar.subheader("🗺️ Map Layers")
+    st.sidebar.subheader(" Map Layers")
     show_solar = st.sidebar.checkbox("Solar Potential Zones", value=True)
     show_wind = st.sidebar.checkbox("Wind Potential Zones", value=True)
     show_projects = st.sidebar.checkbox("Energy Projects", value=True)
@@ -141,7 +141,7 @@ def render_map_page():
         heatmap_type = 'solar'
     
     # Region selector
-    st.sidebar.subheader("📍 Region Focus")
+    st.sidebar.subheader(" Region Focus")
     region_list = list(ALGERIA_REGIONS.keys())
     selected_region = st.sidebar.selectbox(
         "Select a Region",
@@ -152,7 +152,7 @@ def render_map_page():
     with st.spinner("Calculating energy forecasts..."):
         forecasts = calculate_region_forecasts(selected_month)
     
-    st.subheader(f"📍 Interactive Energy Map - {month_names[selected_month-1]}")
+    st.subheader(f" Interactive Energy Map - {month_names[selected_month-1]}")
     
     # Create Layout (Map + Stats)
     col1, col2 = st.columns([2, 1])
@@ -180,7 +180,7 @@ def render_map_page():
         st_folium(m, width=800, height=500)
 
     with col2:
-        st.subheader("📊 Regional Statistics")
+        st.subheader(" Regional Statistics")
         if selected_region != 'All Regions':
             data = ALGERIA_REGIONS[selected_region]
             st.metric("Solar Potential", f"{data['solar_potential']*100:.0f}%")
@@ -194,7 +194,7 @@ def render_map_page():
 
 def render_simulation_page():
     """Render the Solar AI Simulation page."""
-    st.subheader("☀️ Solar AI Hybrid Engine Simulator")
+    st.subheader(" Solar AI Hybrid Engine Simulator")
     
     st.info("This module uses the XGBoost + LSTM Hybrid model (via API) to predict solar power output based on synthetic weather data.")
     
@@ -236,7 +236,7 @@ def render_simulation_page():
 
 def render_wind_simulation_page():
     """Render the Wind AI Simulation page."""
-    st.subheader("🌬️ Wind Turbine AI Simulator")
+    st.subheader(" Wind Turbine AI Simulator")
     
     st.info("Physics-Informed Transformer model (via API) for 48-hour Wind Power Forecasting.")
     

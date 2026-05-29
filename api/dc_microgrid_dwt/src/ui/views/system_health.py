@@ -13,7 +13,7 @@ def render_system_health():
     """Render the system health monitoring page."""
     st.markdown("""
     <div class="page-header">
-        <h2>💚 System Health</h2>
+        <h2> System Health</h2>
         <p>Resource usage, event throughput, latency, and DSP pipeline performance</p>
     </div>
     """, unsafe_allow_html=True)
@@ -46,7 +46,7 @@ def render_system_health():
 
 def _render_dsp_stats():
     """Show C++ DSP pipeline performance stats."""
-    st.markdown("#### ⚡ C++ DSP Pipeline")
+    st.markdown("####  C++ DSP Pipeline")
 
     dsp = st.session_state.get("dsp_pipeline")
     if not dsp:
@@ -69,7 +69,7 @@ def _render_health_history():
         st.info("Accumulating health history...")
         return
 
-    st.markdown("#### 📈 Performance Trends")
+    st.markdown("####  Performance Trends")
 
     col1, col2 = st.columns(2)
 

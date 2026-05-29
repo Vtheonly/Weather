@@ -125,5 +125,5 @@ class PreciseFaultLocatorAgent(BaseAgent):
         )
         self.publish(location_evt)
         
-        self.logger.info(f"📍 Fault Located: {estimated_dist:.2f}m in {zone}", 
+        self.logger.info(f" Fault Located: {estimated_dist:.2f}m in {zone}", 
                          extra={"props": {"distance": estimated_dist, "toa": toa}})

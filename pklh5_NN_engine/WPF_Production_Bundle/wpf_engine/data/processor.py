@@ -8,7 +8,7 @@ from wpf_engine.config.settings import Config
 class PhysicsEngine:
     @staticmethod
     def engineer_features(df: pd.DataFrame) -> pd.DataFrame:
-        print("⚡ Igniting Physics Engine...")
+        print(" Igniting Physics Engine...")
         df['Patv'] = df['Patv'].clip(lower=0)
         wdir_rad = np.deg2rad(df['Wdir'])
         df['U'] = df['Wspd'] * np.cos(wdir_rad)
@@ -23,7 +23,7 @@ class DataManager:
         self.scaler = MinMaxScaler()
 
     def prepare_data(self, df):
-        print("⚖️ Scaling 4.7M+ rows (MinMax)...")
+        print(" Scaling 4.7M+ rows (MinMax)...")
         df[Config.PHYSICS_FEATURES] = self.scaler.fit_transform(df[Config.PHYSICS_FEATURES])
         joblib.dump(self.scaler, Config.get_scaler_path())
         return df, self.scaler

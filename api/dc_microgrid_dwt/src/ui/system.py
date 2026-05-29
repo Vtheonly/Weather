@@ -254,10 +254,10 @@ def start_system():
         st.session_state.system_running = True
 
         dsp_label = "C++ DSP" if dsp_pipeline else "Python Fallback"
-        add_log(f"✅ System started successfully! (DSP: {dsp_label})", "INFO")
+        add_log(f" System started successfully! (DSP: {dsp_label})", "INFO")
 
     except Exception as e:
-        add_log(f"❌ Failed to start system: {e}", "ERROR")
+        add_log(f" Failed to start system: {e}", "ERROR")
         logger.exception("System start failed")
 
 
@@ -305,7 +305,7 @@ def inject_fault(fault_type: str, severity: float, location: str, properties: di
 
     st.session_state.fault_active = True
     st.session_state.fault_type = fault_type
-    add_log(f"⚡ Fault injected: {fault_type} at {location} (severity: {severity})", "WARNING")
+    add_log(f" Fault injected: {fault_type} at {location} (severity: {severity})", "WARNING")
 
 
 def clear_fault():
@@ -400,7 +400,7 @@ def _handle_event(event):
 
     elif event_type == "SystemTripEvent":
         st.session_state.trip_active = True
-        add_log(f"🔴 SYSTEM TRIP: {getattr(event, 'reason', 'Unknown')}", "ERROR")
+        add_log(f" SYSTEM TRIP: {getattr(event, 'reason', 'Unknown')}", "ERROR")
 
     elif event_type == "HealthStatusEvent":
         st.session_state.health_data = {

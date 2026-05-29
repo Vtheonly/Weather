@@ -80,7 +80,7 @@ def build():
     print(f"  Installed: {dest}")
 
     # Verify import
-    print("\n[✓] Verifying import...")
+    print("\n[] Verifying import...")
     result = subprocess.run(
         [sys.executable, "-c",
          "import sys; sys.path.insert(0, '.'); import microgrid_dsp as d; "

@@ -10,7 +10,7 @@ def render_system_log():
     """Render the system log page."""
     st.markdown("""
     <div class="page-header">
-        <h2>📜 System Log</h2>
+        <h2> System Log</h2>
         <p>Real-time system events, warnings, and errors</p>
     </div>
     """, unsafe_allow_html=True)
@@ -18,7 +18,7 @@ def render_system_log():
     # Controls
     col1, col2 = st.columns([3, 1])
     with col2:
-        if st.button("🗑️ Clear Log", key="btn_clear_log"):
+        if st.button(" Clear Log", key="btn_clear_log"):
             st.session_state.system_log = []
             st.rerun()
 

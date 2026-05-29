@@ -10,7 +10,7 @@ def render_reports():
     """Render the reports page."""
     st.markdown("""
     <div class="page-header">
-        <h2>📋 Reports</h2>
+        <h2> Reports</h2>
         <p>Fault analysis reports, daily summaries, and benchmark results</p>
     </div>
     """, unsafe_allow_html=True)
@@ -32,7 +32,7 @@ def render_reports():
     # Fault events table
     events = st.session_state.get("fault_events", [])
     if events:
-        st.markdown("#### 🔍 Fault Event History")
+        st.markdown("####  Fault Event History")
         import time
         import pandas as pd
 
@@ -52,7 +52,7 @@ def render_reports():
     # DSP Performance
     if st.session_state.get("dsp_available") and st.session_state.get("dsp_pipeline"):
         dsp = st.session_state.dsp_pipeline
-        st.markdown("#### ⚡ DSP Performance")
+        st.markdown("####  DSP Performance")
         st.markdown(f"""
         | Metric | Value |
         |--------|-------|

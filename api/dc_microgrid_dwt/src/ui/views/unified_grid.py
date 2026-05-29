@@ -21,7 +21,7 @@ from src.domain.circuit import CircuitModel
 
 def render_unified_grid():
     """Render unified digital twin and circuit design view."""
-    st.markdown("## 🧩 Unified Grid: Digital Twin & Circuit Model")
+    st.markdown("##  Unified Grid: Digital Twin & Circuit Model")
 
     twin_tab, circuit_tab, telemetry_tab = st.tabs(
         ["Digital Twin", "Circuit Designer", "Component Telemetry"]
@@ -31,7 +31,7 @@ def render_unified_grid():
         render_digital_twin()
         render_live_fault_graphs()
 
-        st.markdown("### 🧭 Fault Trace")
+        st.markdown("###  Fault Trace")
         fault_location = st.session_state.get("fault_location")
         if fault_location:
             circuit_model = st.session_state.get("circuit_model")
@@ -88,7 +88,7 @@ def render_unified_grid():
 
 def render_live_fault_graphs():
     """Render immediate fault visibility graphs in the Unified Grid view."""
-    st.markdown("### 📉 Live Fault Graphs")
+    st.markdown("###  Live Fault Graphs")
 
     if not st.session_state.get("system_running"):
         st.info("Start the system to see live fault graphs.")
@@ -269,7 +269,7 @@ def _render_component_telemetry(title: str, series_by_node: Dict[str, List[Dict[
 
 def _render_recording_controls():
     """Render recording and replay controls."""
-    st.markdown("### ⏺️ Recording & Replay")
+    st.markdown("###  Recording & Replay")
     controls = st.columns([1, 1, 1])
     with controls[0]:
         if st.button("Start Recording", width='stretch', disabled=st.session_state.get("recording_enabled", False)):

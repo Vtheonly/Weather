@@ -11,7 +11,7 @@ class WindProductionEngine:
     Requires: model.h5, scaler.pkl, and a CSV snippet.
     """
     def __init__(self, model_path, scaler_path):
-        print("🤖 Loading Production AI Brain...")
+        print(" Loading Production AI Brain...")
         self.model = tf.keras.models.load_model(model_path)
         self.scaler = joblib.load(scaler_path)
         self.physics_features = [
@@ -70,14 +70,14 @@ if __name__ == "__main__":
     DATA_FILE = "wtbdata_245days.csv"
     
     if not os.path.exists(MODEL_FILE):
-        print(f"❌ Error: Place {MODEL_FILE} in this folder.")
+        print(f" Error: Place {MODEL_FILE} in this folder.")
     else:
         engine = WindProductionEngine(MODEL_FILE, SCALER_FILE)
         
         # Load a random snippet from the dataset to simulate a "Live Turbine"
         raw_df = pd.read_csv(DATA_FILE).iloc[500:500+144] # 24 hours of history
         
-        print("⚡ Running 48-hour forecast...")
+        print(" Running 48-hour forecast...")
         forecast = engine.predict_48h(raw_df)
         
         plt.figure(figsize=(12,5))

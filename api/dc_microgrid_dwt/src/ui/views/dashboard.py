@@ -18,7 +18,7 @@ def render_dashboard():
     # --- Header ---
     st.markdown("""
     <div class="page-header">
-        <h2>📊 Real-Time Dashboard</h2>
+        <h2> Real-Time Dashboard</h2>
         <p>Live monitoring of DC microgrid voltages, wavelet energy, and fault status</p>
     </div>
     """, unsafe_allow_html=True)
@@ -39,7 +39,7 @@ def render_dashboard():
         latency = st.session_state.health_data.get("latency", 0)
         _metric_card("Latency", f"{latency:.1f}", "ms", COLORS["warning"])
     with col5:
-        status = "🔴 FAULT" if st.session_state.fault_active else "🟢 NORMAL"
+        status = " FAULT" if st.session_state.fault_active else " NORMAL"
         color = COLORS["danger"] if st.session_state.fault_active else COLORS["success"]
         _metric_card("Status", status, "", color)
 
@@ -51,7 +51,7 @@ def render_dashboard():
         dist_str = f" at {dist:.1f}m" if dist else ""
         st.markdown(f"""
         <div class="fault-alert">
-            <strong>⚠️ FAULT DETECTED</strong>: {fault_type} in Zone {zone}{dist_str}
+            <strong> FAULT DETECTED</strong>: {fault_type} in Zone {zone}{dist_str}
         </div>
         """, unsafe_allow_html=True)
 
@@ -84,7 +84,7 @@ def _metric_card(label, value, unit, color):
 
 def _render_voltage_waveform():
     """Render real-time voltage waveform plot."""
-    st.markdown("#### ⚡ Voltage Waveform")
+    st.markdown("####  Voltage Waveform")
 
     data = st.session_state.voltage_data
     if not data:
@@ -119,7 +119,7 @@ def _render_voltage_waveform():
 
 def _render_energy_breakdown():
     """Render DWT energy breakdown as bar chart."""
-    st.markdown("#### 🔬 DWT Energy Spectrum")
+    st.markdown("####  DWT Energy Spectrum")
 
     energy = st.session_state.dwt_energy
     if not any(energy.values()):
@@ -154,7 +154,7 @@ def _render_node_voltages():
     if not nodes:
         return
 
-    st.markdown("#### 🔌 Per-Node Voltages")
+    st.markdown("####  Per-Node Voltages")
     cols = st.columns(min(len(nodes), 6))
     for i, (node_id, info) in enumerate(nodes.items()):
         with cols[i % len(cols)]:

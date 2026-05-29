@@ -32,7 +32,7 @@ def main():
     # 1. Page Config
     st.set_page_config(
         page_title="DC Microgrid Fault Detection",
-        page_icon="⚡",
+        page_icon="",
         layout="wide",
         initial_sidebar_state="expanded",
     )

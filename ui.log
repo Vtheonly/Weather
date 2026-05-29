@@ -17,7 +17,7 @@
 [31m [0m   [2m 5 [0m                                                                                [31m [0m
 [31m [0m   [2m 6 [0m[94mimport[0m[90m [0m[4;96mstreamlit[0m[90m [0m[94mas[0m[90m [0m[4;96mst[0m                                                          [31m [0m
 [31m [0m   [2m 7 [0m[94mfrom[0m[90m [0m[4;96mconfig[0m[4;96m.[0m[4;96msettings[0m[90m [0m[94mimport[0m init_page_config                                    [31m [0m
-[31m [0m [31m❱ [0m 8 [94mfrom[0m[90m [0m[4;96mui[0m[4;96m.[0m[4;96mdashboard[0m[90m [0m[94mimport[0m render_dashboard                                       [31m [0m
+[31m [0m [31m [0m 8 [94mfrom[0m[90m [0m[4;96mui[0m[4;96m.[0m[4;96mdashboard[0m[90m [0m[94mimport[0m render_dashboard                                       [31m [0m
 [31m [0m   [2m 9 [0m                                                                                [31m [0m
 [31m [0m   [2m10 [0m[94mdef[0m[90m [0m[92mmain[0m():                                                                     [31m [0m
 [31m [0m   [2m11 [0m[2;90m│   [0m[33m"""Run the application."""[0m                                                  [31m [0m
@@ -27,7 +27,7 @@
 [31m [0m   [2m 20 [0m[2m│   [0mcalculate_region_forecasts                                                 [31m [0m
 [31m [0m   [2m 21 [0m)                                                                              [31m [0m
 [31m [0m   [2m 22 [0m[94mfrom[0m[90m [0m[4;96mui[0m[4;96m.[0m[4;96mcharts[0m[90m [0m[94mimport[0m create_monthly_chart_data                                [31m [0m
-[31m [0m [31m❱ [0m 23 [94mfrom[0m[90m [0m[4;96mui[0m[4;96m.[0m[4;96mfault_detection_page[0m[90m [0m[94mimport[0m render_fault_detection_page                [31m [0m
+[31m [0m [31m [0m 23 [94mfrom[0m[90m [0m[4;96mui[0m[4;96m.[0m[4;96mfault_detection_page[0m[90m [0m[94mimport[0m render_fault_detection_page                [31m [0m
 [31m [0m   [2m 24 [0m[94mfrom[0m[90m [0m[4;96mcore[0m[4;96m.[0m[4;96msimulation[0m[4;96m.[0m[4;96mgenerator[0m[90m [0m[94mimport[0m SolarDataGenerator, WindDataGenerator    [31m [0m
 [31m [0m   [2m 25 [0m                                                                               [31m [0m
 [31m [0m   [2m 26 [0m[2m# API URL[0m                                                                      [31m [0m
@@ -37,7 +37,7 @@
 [31m [0m   [2m 17 [0m[2m│   [0mCUSTOM_CSS,                                                                [31m [0m
 [31m [0m   [2m 18 [0m[2m│   [0mCOLORS                                                                     [31m [0m
 [31m [0m   [2m 19 [0m)                                                                              [31m [0m
-[31m [0m [31m❱ [0m 20 [94mfrom[0m[90m [0m[4;96mui[0m[4;96m.[0m[4;96mlib[0m[4;96m.[0m[4;96mfault_detection[0m[4;96m.[0m[4;96mcomponents[0m[90m [0m[94mimport[0m (                                [31m [0m
+[31m [0m [31m [0m 20 [94mfrom[0m[90m [0m[4;96mui[0m[4;96m.[0m[4;96mlib[0m[4;96m.[0m[4;96mfault_detection[0m[4;96m.[0m[4;96mcomponents[0m[90m [0m[94mimport[0m (                                [31m [0m
 [31m [0m   [2m 21 [0m[2m│   [0mGaugeComponent,                                                            [31m [0m
 [31m [0m   [2m 22 [0m[2m│   [0mVisualizationComponent,                                                    [31m [0m
 [31m [0m   [2m 23 [0m[2m│   [0mDigitalTwinComponent,                                                      [31m [0m
@@ -45,7 +45,7 @@
 [31m [0m [2m/home/mersel/Documents/Projects/Weather/ui/lib/fault_detection/components/[0m[1m__init__.p[0m [31m [0m
 [31m [0m [1my[0m:1 in <module>                                                                      [31m [0m
 [31m [0m                                                                                      [31m [0m
-[31m [0m [31m❱ [0m 1 [94mfrom[0m[90m [0m[4;96m.[0m[4;96mgauges[0m[90m [0m[94mimport[0m GaugeComponent                                              [31m [0m
+[31m [0m [31m [0m 1 [94mfrom[0m[90m [0m[4;96m.[0m[4;96mgauges[0m[90m [0m[94mimport[0m GaugeComponent                                              [31m [0m
 [31m [0m   [2m 2 [0m[94mfrom[0m[90m [0m[4;96m.[0m[4;96mplots[0m[90m [0m[94mimport[0m VisualizationComponent                                       [31m [0m
 [31m [0m   [2m 3 [0m[94mfrom[0m[90m [0m[4;96m.[0m[4;96mdigital_twin[0m[90m [0m[94mimport[0m DigitalTwinComponent                                  [31m [0m
 [31m [0m   [2m 4 [0m[94mfrom[0m[90m [0m[4;96m.[0m[4;96manalysis[0m[90m [0m[94mimport[0m AnalysisComponent                                         [31m [0m
@@ -56,7 +56,7 @@
 [31m [0m   [2m 2 [0m[94mimport[0m[90m [0m[4;96mplotly[0m[4;96m.[0m[4;96mgraph_objects[0m[90m [0m[94mas[0m[90m [0m[4;96mgo[0m                                               [31m [0m
 [31m [0m   [2m 3 [0m[94mfrom[0m[90m [0m[4;96m.[0m[4;96m.[0m[4;96mconstants[0m[90m [0m[94mimport[0m COLORS, FAULT_COLORS, FAULT_ICONS                       [31m [0m
 [31m [0m   [2m 4 [0m                                                                                [31m [0m
-[31m [0m [31m❱ [0m 5 [94mclass[0m[90m [0m[4;92mGaugeComponent[0m:                                                           [31m [0m
+[31m [0m [31m [0m 5 [94mclass[0m[90m [0m[4;92mGaugeComponent[0m:                                                           [31m [0m
 [31m [0m   [2m 6 [0m[2;90m│   [0m[33m"""[0m                                                                         [31m [0m
 [31m [0m   [2m 7 [0m[2;33m│   [0m[33mRenders styled metric cards and speedometer gauges.[0m                         [31m [0m
 [31m [0m   [2m 8 [0m[2;33m│   [0m[33m"""[0m                                                                         [31m [0m
@@ -67,7 +67,7 @@
 [31m [0m   [2m 8 [0m[2;33m│   [0m[33m"""[0m                                                                         [31m [0m
 [31m [0m   [2m 9 [0m[2m│   [0m                                                                            [31m [0m
 [31m [0m   [2m10 [0m[2m│   [0m[1;95m@staticmethod[0m                                                               [31m [0m
-[31m [0m [31m❱ [0m11 [2m│   [0m[94mdef[0m[90m [0m[92mrender_metric_card[0m(label: [96mstr[0m, value: Any, unit: [96mstr[0m, color: [96mstr[0m):      [31m [0m
+[31m [0m [31m [0m11 [2m│   [0m[94mdef[0m[90m [0m[92mrender_metric_card[0m(label: [96mstr[0m, value: Any, unit: [96mstr[0m, color: [96mstr[0m):      [31m [0m
 [31m [0m   [2m12 [0m[2;90m│   │   [0m[33m"""Render a styled metric card with a color gradient."""[0m                [31m [0m
 [31m [0m   [2m13 [0m[2m│   │   [0mst.markdown([33mf[0m[33m"""[0m                                                        [31m [0m
 [31m [0m   [2m14 [0m[2;33m│   │   [0m[33m<div class=[0m[33m"[0m[33mmetric-card[0m[33m"[0m[33m>[0m                                               [31m [0m
@@ -85,7 +85,7 @@
 [31m [0m   [2m13 [0m[2m│   [0mrender_dashboard()                                                          [31m [0m
 [31m [0m   [2m14 [0m                                                                                [31m [0m
 [31m [0m   [2m15 [0m[94mif[0m [91m__name__[0m == [33m"[0m[33m__main__[0m[33m"[0m:                                                      [31m [0m
-[31m [0m [31m❱ [0m16 [2m│   [0mmain()                                                                      [31m [0m
+[31m [0m [31m [0m16 [2m│   [0mmain()                                                                      [31m [0m
 [31m [0m   [2m17 [0m                                                                                [31m [0m
 [31m [0m                                                                                      [31m [0m
 [31m [0m [2m/home/mersel/Documents/Projects/Weather/[0m[1mmain.py[0m:13 in main                           [31m [0m
@@ -93,7 +93,7 @@
 [31m [0m   [2m10 [0m[94mdef[0m[90m [0m[92mmain[0m():                                                                     [31m [0m
 [31m [0m   [2m11 [0m[2;90m│   [0m[33m"""Run the application."""[0m                                                  [31m [0m
 [31m [0m   [2m12 [0m[2m│   [0minit_page_config()                                                          [31m [0m
-[31m [0m [31m❱ [0m13 [2m│   [0mrender_dashboard()                                                          [31m [0m
+[31m [0m [31m [0m13 [2m│   [0mrender_dashboard()                                                          [31m [0m
 [31m [0m   [2m14 [0m                                                                                [31m [0m
 [31m [0m   [2m15 [0m[94mif[0m [91m__name__[0m == [33m"[0m[33m__main__[0m[33m"[0m:                                                      [31m [0m
 [31m [0m   [2m16 [0m[2m│   [0mmain()                                                                      [31m [0m
@@ -103,7 +103,7 @@
 [31m [0m   [2m106 [0m[2m│   [0m[94melif[0m page == [33m"[0m[33mWind AI Simulator[0m[33m"[0m:                                          [31m [0m
 [31m [0m   [2m107 [0m[2m│   │   [0mrender_wind_simulation_page()                                          [31m [0m
 [31m [0m   [2m108 [0m[2m│   [0m[94melse[0m:                                                                      [31m [0m
-[31m [0m [31m❱ [0m109 [2m│   │   [0mrender_fault_detection_page()                                          [31m [0m
+[31m [0m [31m [0m109 [2m│   │   [0mrender_fault_detection_page()                                          [31m [0m
 [31m [0m   [2m110 [0m                                                                               [31m [0m
 [31m [0m   [2m111 [0m                                                                               [31m [0m
 [31m [0m   [2m112 [0m[94mdef[0m[90m [0m[92mrender_map_page[0m():                                                         [31m [0m
@@ -114,7 +114,7 @@
 [31m [0m   [2m148 [0m[2m│   │   [0m[94mfor[0m f [95min[0m factories:                                                    [31m [0m
 [31m [0m   [2m149 [0m[2m│   │   │   [0mnode_status[f[[33m"[0m[33mfactory_id[0m[33m"[0m]] = {                                   [31m [0m
 [31m [0m   [2m150 [0m[2m│   │   │   │   [0m[33m"[0m[33mvoltage[0m[33m"[0m: f[[33m"[0m[33mbattery[0m[33m"[0m][[33m"[0m[33mvoltage[0m[33m"[0m],                            [31m [0m
-[31m [0m [31m❱ [0m151 [2m│   │   │   │   [0m[33m"[0m[33mstatus[0m[33m"[0m: f[[33m"[0m[33mfault[0m[33m"[0m][[33m"[0m[33mclass[0m[33m"[0m]                                  [31m [0m
+[31m [0m [31m [0m151 [2m│   │   │   │   [0m[33m"[0m[33mstatus[0m[33m"[0m: f[[33m"[0m[33mfault[0m[33m"[0m][[33m"[0m[33mclass[0m[33m"[0m]                                  [31m [0m
 [31m [0m   [2m152 [0m[2m│   │   │   [0m}                                                                  [31m [0m
 [31m [0m   [2m153 [0m[2m│   │   │   [0m[2m# For factories, their internal nodes are also monitored by the en[0m [31m [0m
 [31m [0m   [2m154 [0m[2m│   │   │   [0m[2m# mapping them to the main status[0m                                  [31m [0m
@@ -132,7 +132,7 @@
 [31m [0m   [2m13 [0m[2m│   [0mrender_dashboard()                                                          [31m [0m
 [31m [0m   [2m14 [0m                                                                                [31m [0m
 [31m [0m   [2m15 [0m[94mif[0m [91m__name__[0m == [33m"[0m[33m__main__[0m[33m"[0m:                                                      [31m [0m
-[31m [0m [31m❱ [0m16 [2m│   [0mmain()                                                                      [31m [0m
+[31m [0m [31m [0m16 [2m│   [0mmain()                                                                      [31m [0m
 [31m [0m   [2m17 [0m                                                                                [31m [0m
 [31m [0m                                                                                      [31m [0m
 [31m [0m [2m/home/mersel/Documents/Projects/Weather/[0m[1mmain.py[0m:13 in main                           [31m [0m
@@ -140,7 +140,7 @@
 [31m [0m   [2m10 [0m[94mdef[0m[90m [0m[92mmain[0m():                                                                     [31m [0m
 [31m [0m   [2m11 [0m[2;90m│   [0m[33m"""Run the application."""[0m                                                  [31m [0m
 [31m [0m   [2m12 [0m[2m│   [0minit_page_config()                                                          [31m [0m
-[31m [0m [31m❱ [0m13 [2m│   [0mrender_dashboard()                                                          [31m [0m
+[31m [0m [31m [0m13 [2m│   [0mrender_dashboard()                                                          [31m [0m
 [31m [0m   [2m14 [0m                                                                                [31m [0m
 [31m [0m   [2m15 [0m[94mif[0m [91m__name__[0m == [33m"[0m[33m__main__[0m[33m"[0m:                                                      [31m [0m
 [31m [0m   [2m16 [0m[2m│   [0mmain()                                                                      [31m [0m
@@ -150,7 +150,7 @@
 [31m [0m   [2m106 [0m[2m│   [0m[94melif[0m page == [33m"[0m[33mWind AI Simulator[0m[33m"[0m:                                          [31m [0m
 [31m [0m   [2m107 [0m[2m│   │   [0mrender_wind_simulation_page()                                          [31m [0m
 [31m [0m   [2m108 [0m[2m│   [0m[94melse[0m:                                                                      [31m [0m
-[31m [0m [31m❱ [0m109 [2m│   │   [0mrender_fault_detection_page()                                          [31m [0m
+[31m [0m [31m [0m109 [2m│   │   [0mrender_fault_detection_page()                                          [31m [0m
 [31m [0m   [2m110 [0m                                                                               [31m [0m
 [31m [0m   [2m111 [0m                                                                               [31m [0m
 [31m [0m   [2m112 [0m[94mdef[0m[90m [0m[92mrender_map_page[0m():                                                         [31m [0m
@@ -161,7 +161,7 @@
 [31m [0m   [2m148 [0m[2m│   │   [0m[94mfor[0m f [95min[0m factories:                                                    [31m [0m
 [31m [0m   [2m149 [0m[2m│   │   │   [0mnode_status[f[[33m"[0m[33mfactory_id[0m[33m"[0m]] = {                                   [31m [0m
 [31m [0m   [2m150 [0m[2m│   │   │   │   [0m[33m"[0m[33mvoltage[0m[33m"[0m: f[[33m"[0m[33mbattery[0m[33m"[0m][[33m"[0m[33mvoltage[0m[33m"[0m],                            [31m [0m
-[31m [0m [31m❱ [0m151 [2m│   │   │   │   [0m[33m"[0m[33mstatus[0m[33m"[0m: f[[33m"[0m[33mfault[0m[33m"[0m][[33m"[0m[33mclass[0m[33m"[0m]                                  [31m [0m
+[31m [0m [31m [0m151 [2m│   │   │   │   [0m[33m"[0m[33mstatus[0m[33m"[0m: f[[33m"[0m[33mfault[0m[33m"[0m][[33m"[0m[33mclass[0m[33m"[0m]                                  [31m [0m
 [31m [0m   [2m152 [0m[2m│   │   │   [0m}                                                                  [31m [0m
 [31m [0m   [2m153 [0m[2m│   │   │   [0m[2m# For factories, their internal nodes are also monitored by the en[0m [31m [0m
 [31m [0m   [2m154 [0m[2m│   │   │   [0m[2m# mapping them to the main status[0m                                  [31m [0m
@@ -179,7 +179,7 @@
 [31m [0m   [2m13 [0m[2m│   [0mrender_dashboard()                                                          [31m [0m
 [31m [0m   [2m14 [0m                                                                                [31m [0m
 [31m [0m   [2m15 [0m[94mif[0m [91m__name__[0m == [33m"[0m[33m__main__[0m[33m"[0m:                                                      [31m [0m
-[31m [0m [31m❱ [0m16 [2m│   [0mmain()                                                                      [31m [0m
+[31m [0m [31m [0m16 [2m│   [0mmain()                                                                      [31m [0m
 [31m [0m   [2m17 [0m                                                                                [31m [0m
 [31m [0m                                                                                      [31m [0m
 [31m [0m [2m/home/mersel/Documents/Projects/Weather/[0m[1mmain.py[0m:13 in main                           [31m [0m
@@ -187,7 +187,7 @@
 [31m [0m   [2m10 [0m[94mdef[0m[90m [0m[92mmain[0m():                                                                     [31m [0m
 [31m [0m   [2m11 [0m[2;90m│   [0m[33m"""Run the application."""[0m                                                  [31m [0m
 [31m [0m   [2m12 [0m[2m│   [0minit_page_config()                                                          [31m [0m
-[31m [0m [31m❱ [0m13 [2m│   [0mrender_dashboard()                                                          [31m [0m
+[31m [0m [31m [0m13 [2m│   [0mrender_dashboard()                                                          [31m [0m
 [31m [0m   [2m14 [0m                                                                                [31m [0m
 [31m [0m   [2m15 [0m[94mif[0m [91m__name__[0m == [33m"[0m[33m__main__[0m[33m"[0m:                                                      [31m [0m
 [31m [0m   [2m16 [0m[2m│   [0mmain()                                                                      [31m [0m
@@ -197,7 +197,7 @@
 [31m [0m   [2m106 [0m[2m│   [0m[94melif[0m page == [33m"[0m[33mWind AI Simulator[0m[33m"[0m:                                          [31m [0m
 [31m [0m   [2m107 [0m[2m│   │   [0mrender_wind_simulation_page()                                          [31m [0m
 [31m [0m   [2m108 [0m[2m│   [0m[94melse[0m:                                                                      [31m [0m
-[31m [0m [31m❱ [0m109 [2m│   │   [0mrender_fault_detection_page()                                          [31m [0m
+[31m [0m [31m [0m109 [2m│   │   [0mrender_fault_detection_page()                                          [31m [0m
 [31m [0m   [2m110 [0m                                                                               [31m [0m
 [31m [0m   [2m111 [0m                                                                               [31m [0m
 [31m [0m   [2m112 [0m[94mdef[0m[90m [0m[92mrender_map_page[0m():                                                         [31m [0m
@@ -208,7 +208,7 @@
 [31m [0m   [2m148 [0m[2m│   │   [0m[94mfor[0m f [95min[0m factories:                                                    [31m [0m
 [31m [0m   [2m149 [0m[2m│   │   │   [0mnode_status[f[[33m"[0m[33mfactory_id[0m[33m"[0m]] = {                                   [31m [0m
 [31m [0m   [2m150 [0m[2m│   │   │   │   [0m[33m"[0m[33mvoltage[0m[33m"[0m: f[[33m"[0m[33mbattery[0m[33m"[0m][[33m"[0m[33mvoltage[0m[33m"[0m],                            [31m [0m
-[31m [0m [31m❱ [0m151 [2m│   │   │   │   [0m[33m"[0m[33mstatus[0m[33m"[0m: f[[33m"[0m[33mfault[0m[33m"[0m][[33m"[0m[33mclass[0m[33m"[0m]                                  [31m [0m
+[31m [0m [31m [0m151 [2m│   │   │   │   [0m[33m"[0m[33mstatus[0m[33m"[0m: f[[33m"[0m[33mfault[0m[33m"[0m][[33m"[0m[33mclass[0m[33m"[0m]                                  [31m [0m
 [31m [0m   [2m152 [0m[2m│   │   │   [0m}                                                                  [31m [0m
 [31m [0m   [2m153 [0m[2m│   │   │   [0m[2m# For factories, their internal nodes are also monitored by the en[0m [31m [0m
 [31m [0m   [2m154 [0m[2m│   │   │   [0m[2m# mapping them to the main status[0m                                  [31m [0m
@@ -226,7 +226,7 @@
 [31m [0m   [2m13 [0m[2m│   [0mrender_dashboard()                                                          [31m [0m
 [31m [0m   [2m14 [0m                                                                                [31m [0m
 [31m [0m   [2m15 [0m[94mif[0m [91m__name__[0m == [33m"[0m[33m__main__[0m[33m"[0m:                                                      [31m [0m
-[31m [0m [31m❱ [0m16 [2m│   [0mmain()                                                                      [31m [0m
+[31m [0m [31m [0m16 [2m│   [0mmain()                                                                      [31m [0m
 [31m [0m   [2m17 [0m                                                                                [31m [0m
 [31m [0m                                                                                      [31m [0m
 [31m [0m [2m/home/mersel/Documents/Projects/Weather/[0m[1mmain.py[0m:13 in main                           [31m [0m
@@ -234,7 +234,7 @@
 [31m [0m   [2m10 [0m[94mdef[0m[90m [0m[92mmain[0m():                                                                     [31m [0m
 [31m [0m   [2m11 [0m[2;90m│   [0m[33m"""Run the application."""[0m                                                  [31m [0m
 [31m [0m   [2m12 [0m[2m│   [0minit_page_config()                                                          [31m [0m
-[31m [0m [31m❱ [0m13 [2m│   [0mrender_dashboard()                                                          [31m [0m
+[31m [0m [31m [0m13 [2m│   [0mrender_dashboard()                                                          [31m [0m
 [31m [0m   [2m14 [0m                                                                                [31m [0m
 [31m [0m   [2m15 [0m[94mif[0m [91m__name__[0m == [33m"[0m[33m__main__[0m[33m"[0m:                                                      [31m [0m
 [31m [0m   [2m16 [0m[2m│   [0mmain()                                                                      [31m [0m
@@ -244,7 +244,7 @@
 [31m [0m   [2m106 [0m[2m│   [0m[94melif[0m page == [33m"[0m[33mWind AI Simulator[0m[33m"[0m:                                          [31m [0m
 [31m [0m   [2m107 [0m[2m│   │   [0mrender_wind_simulation_page()                                          [31m [0m
 [31m [0m   [2m108 [0m[2m│   [0m[94melse[0m:                                                                      [31m [0m
-[31m [0m [31m❱ [0m109 [2m│   │   [0mrender_fault_detection_page()                                          [31m [0m
+[31m [0m [31m [0m109 [2m│   │   [0mrender_fault_detection_page()                                          [31m [0m
 [31m [0m   [2m110 [0m                                                                               [31m [0m
 [31m [0m   [2m111 [0m                                                                               [31m [0m
 [31m [0m   [2m112 [0m[94mdef[0m[90m [0m[92mrender_map_page[0m():                                                         [31m [0m
@@ -255,7 +255,7 @@
 [31m [0m   [2m148 [0m[2m│   │   [0m[94mfor[0m f [95min[0m factories:                                                    [31m [0m
 [31m [0m   [2m149 [0m[2m│   │   │   [0mnode_status[f[[33m"[0m[33mfactory_id[0m[33m"[0m]] = {                                   [31m [0m
 [31m [0m   [2m150 [0m[2m│   │   │   │   [0m[33m"[0m[33mvoltage[0m[33m"[0m: f[[33m"[0m[33mbattery[0m[33m"[0m][[33m"[0m[33mvoltage[0m[33m"[0m],                            [31m [0m
-[31m [0m [31m❱ [0m151 [2m│   │   │   │   [0m[33m"[0m[33mstatus[0m[33m"[0m: f[[33m"[0m[33mfault[0m[33m"[0m][[33m"[0m[33mclass[0m[33m"[0m]                                  [31m [0m
+[31m [0m [31m [0m151 [2m│   │   │   │   [0m[33m"[0m[33mstatus[0m[33m"[0m: f[[33m"[0m[33mfault[0m[33m"[0m][[33m"[0m[33mclass[0m[33m"[0m]                                  [31m [0m
 [31m [0m   [2m152 [0m[2m│   │   │   [0m}                                                                  [31m [0m
 [31m [0m   [2m153 [0m[2m│   │   │   [0m[2m# For factories, their internal nodes are also monitored by the en[0m [31m [0m
 [31m [0m   [2m154 [0m[2m│   │   │   [0m[2m# mapping them to the main status[0m                                  [31m [0m
@@ -273,7 +273,7 @@
 [31m [0m   [2m13 [0m[2m│   [0mrender_dashboard()                                                          [31m [0m
 [31m [0m   [2m14 [0m                                                                                [31m [0m
 [31m [0m   [2m15 [0m[94mif[0m [91m__name__[0m == [33m"[0m[33m__main__[0m[33m"[0m:                                                      [31m [0m
-[31m [0m [31m❱ [0m16 [2m│   [0mmain()                                                                      [31m [0m
+[31m [0m [31m [0m16 [2m│   [0mmain()                                                                      [31m [0m
 [31m [0m   [2m17 [0m                                                                                [31m [0m
 [31m [0m                                                                                      [31m [0m
 [31m [0m [2m/home/mersel/Documents/Projects/Weather/[0m[1mmain.py[0m:13 in main                           [31m [0m
@@ -281,7 +281,7 @@
 [31m [0m   [2m10 [0m[94mdef[0m[90m [0m[92mmain[0m():                                                                     [31m [0m
 [31m [0m   [2m11 [0m[2;90m│   [0m[33m"""Run the application."""[0m                                                  [31m [0m
 [31m [0m   [2m12 [0m[2m│   [0minit_page_config()                                                          [31m [0m
-[31m [0m [31m❱ [0m13 [2m│   [0mrender_dashboard()                                                          [31m [0m
+[31m [0m [31m [0m13 [2m│   [0mrender_dashboard()                                                          [31m [0m
 [31m [0m   [2m14 [0m                                                                                [31m [0m
 [31m [0m   [2m15 [0m[94mif[0m [91m__name__[0m == [33m"[0m[33m__main__[0m[33m"[0m:                                                      [31m [0m
 [31m [0m   [2m16 [0m[2m│   [0mmain()                                                                      [31m [0m
@@ -291,7 +291,7 @@
 [31m [0m   [2m106 [0m[2m│   [0m[94melif[0m page == [33m"[0m[33mWind AI Simulator[0m[33m"[0m:                                          [31m [0m
 [31m [0m   [2m107 [0m[2m│   │   [0mrender_wind_simulation_page()                                          [31m [0m
 [31m [0m   [2m108 [0m[2m│   [0m[94melse[0m:                                                                      [31m [0m
-[31m [0m [31m❱ [0m109 [2m│   │   [0mrender_fault_detection_page()                                          [31m [0m
+[31m [0m [31m [0m109 [2m│   │   [0mrender_fault_detection_page()                                          [31m [0m
 [31m [0m   [2m110 [0m                                                                               [31m [0m
 [31m [0m   [2m111 [0m                                                                               [31m [0m
 [31m [0m   [2m112 [0m[94mdef[0m[90m [0m[92mrender_map_page[0m():                                                         [31m [0m
@@ -302,7 +302,7 @@
 [31m [0m   [2m148 [0m[2m│   │   [0m[94mfor[0m f [95min[0m factories:                                                    [31m [0m
 [31m [0m   [2m149 [0m[2m│   │   │   [0mnode_status[f[[33m"[0m[33mfactory_id[0m[33m"[0m]] = {                                   [31m [0m
 [31m [0m   [2m150 [0m[2m│   │   │   │   [0m[33m"[0m[33mvoltage[0m[33m"[0m: f[[33m"[0m[33mbattery[0m[33m"[0m][[33m"[0m[33mvoltage[0m[33m"[0m],                            [31m [0m
-[31m [0m [31m❱ [0m151 [2m│   │   │   │   [0m[33m"[0m[33mstatus[0m[33m"[0m: f[[33m"[0m[33mfault[0m[33m"[0m][[33m"[0m[33mclass[0m[33m"[0m]                                  [31m [0m
+[31m [0m [31m [0m151 [2m│   │   │   │   [0m[33m"[0m[33mstatus[0m[33m"[0m: f[[33m"[0m[33mfault[0m[33m"[0m][[33m"[0m[33mclass[0m[33m"[0m]                                  [31m [0m
 [31m [0m   [2m152 [0m[2m│   │   │   [0m}                                                                  [31m [0m
 [31m [0m   [2m153 [0m[2m│   │   │   [0m[2m# For factories, their internal nodes are also monitored by the en[0m [31m [0m
 [31m [0m   [2m154 [0m[2m│   │   │   [0m[2m# mapping them to the main status[0m                                  [31m [0m
@@ -320,7 +320,7 @@
 [31m [0m   [2m13 [0m[2m│   [0mrender_dashboard()                                                          [31m [0m
 [31m [0m   [2m14 [0m                                                                                [31m [0m
 [31m [0m   [2m15 [0m[94mif[0m [91m__name__[0m == [33m"[0m[33m__main__[0m[33m"[0m:                                                      [31m [0m
-[31m [0m [31m❱ [0m16 [2m│   [0mmain()                                                                      [31m [0m
+[31m [0m [31m [0m16 [2m│   [0mmain()                                                                      [31m [0m
 [31m [0m   [2m17 [0m                                                                                [31m [0m
 [31m [0m                                                                                      [31m [0m
 [31m [0m [2m/home/mersel/Documents/Projects/Weather/[0m[1mmain.py[0m:13 in main                           [31m [0m
@@ -328,7 +328,7 @@
 [31m [0m   [2m10 [0m[94mdef[0m[90m [0m[92mmain[0m():                                                                     [31m [0m
 [31m [0m   [2m11 [0m[2;90m│   [0m[33m"""Run the application."""[0m                                                  [31m [0m
 [31m [0m   [2m12 [0m[2m│   [0minit_page_config()                                                          [31m [0m
-[31m [0m [31m❱ [0m13 [2m│   [0mrender_dashboard()                                                          [31m [0m
+[31m [0m [31m [0m13 [2m│   [0mrender_dashboard()                                                          [31m [0m
 [31m [0m   [2m14 [0m                                                                                [31m [0m
 [31m [0m   [2m15 [0m[94mif[0m [91m__name__[0m == [33m"[0m[33m__main__[0m[33m"[0m:                                                      [31m [0m
 [31m [0m   [2m16 [0m[2m│   [0mmain()                                                                      [31m [0m
@@ -338,7 +338,7 @@
 [31m [0m   [2m106 [0m[2m│   [0m[94melif[0m page == [33m"[0m[33mWind AI Simulator[0m[33m"[0m:                                          [31m [0m
 [31m [0m   [2m107 [0m[2m│   │   [0mrender_wind_simulation_page()                                          [31m [0m
 [31m [0m   [2m108 [0m[2m│   [0m[94melse[0m:                                                                      [31m [0m
-[31m [0m [31m❱ [0m109 [2m│   │   [0mrender_fault_detection_page()                                          [31m [0m
+[31m [0m [31m [0m109 [2m│   │   [0mrender_fault_detection_page()                                          [31m [0m
 [31m [0m   [2m110 [0m                                                                               [31m [0m
 [31m [0m   [2m111 [0m                                                                               [31m [0m
 [31m [0m   [2m112 [0m[94mdef[0m[90m [0m[92mrender_map_page[0m():                                                         [31m [0m
@@ -349,7 +349,7 @@
 [31m [0m   [2m148 [0m[2m│   │   [0m[94mfor[0m f [95min[0m factories:                                                    [31m [0m
 [31m [0m   [2m149 [0m[2m│   │   │   [0mnode_status[f[[33m"[0m[33mfactory_id[0m[33m"[0m]] = {                                   [31m [0m
 [31m [0m   [2m150 [0m[2m│   │   │   │   [0m[33m"[0m[33mvoltage[0m[33m"[0m: f[[33m"[0m[33mbattery[0m[33m"[0m][[33m"[0m[33mvoltage[0m[33m"[0m],                            [31m [0m
-[31m [0m [31m❱ [0m151 [2m│   │   │   │   [0m[33m"[0m[33mstatus[0m[33m"[0m: f[[33m"[0m[33mfault[0m[33m"[0m][[33m"[0m[33mclass[0m[33m"[0m]                                  [31m [0m
+[31m [0m [31m [0m151 [2m│   │   │   │   [0m[33m"[0m[33mstatus[0m[33m"[0m: f[[33m"[0m[33mfault[0m[33m"[0m][[33m"[0m[33mclass[0m[33m"[0m]                                  [31m [0m
 [31m [0m   [2m152 [0m[2m│   │   │   [0m}                                                                  [31m [0m
 [31m [0m   [2m153 [0m[2m│   │   │   [0m[2m# For factories, their internal nodes are also monitored by the en[0m [31m [0m
 [31m [0m   [2m154 [0m[2m│   │   │   [0m[2m# mapping them to the main status[0m                                  [31m [0m
@@ -367,7 +367,7 @@
 [31m [0m   [2m13 [0m[2m│   [0mrender_dashboard()                                                          [31m [0m
 [31m [0m   [2m14 [0m                                                                                [31m [0m
 [31m [0m   [2m15 [0m[94mif[0m [91m__name__[0m == [33m"[0m[33m__main__[0m[33m"[0m:                                                      [31m [0m
-[31m [0m [31m❱ [0m16 [2m│   [0mmain()                                                                      [31m [0m
+[31m [0m [31m [0m16 [2m│   [0mmain()                                                                      [31m [0m
 [31m [0m   [2m17 [0m                                                                                [31m [0m
 [31m [0m                                                                                      [31m [0m
 [31m [0m [2m/home/mersel/Documents/Projects/Weather/[0m[1mmain.py[0m:13 in main                           [31m [0m
@@ -375,7 +375,7 @@
 [31m [0m   [2m10 [0m[94mdef[0m[90m [0m[92mmain[0m():                                                                     [31m [0m
 [31m [0m   [2m11 [0m[2;90m│   [0m[33m"""Run the application."""[0m                                                  [31m [0m
 [31m [0m   [2m12 [0m[2m│   [0minit_page_config()                                                          [31m [0m
-[31m [0m [31m❱ [0m13 [2m│   [0mrender_dashboard()                                                          [31m [0m
+[31m [0m [31m [0m13 [2m│   [0mrender_dashboard()                                                          [31m [0m
 [31m [0m   [2m14 [0m                                                                                [31m [0m
 [31m [0m   [2m15 [0m[94mif[0m [91m__name__[0m == [33m"[0m[33m__main__[0m[33m"[0m:                                                      [31m [0m
 [31m [0m   [2m16 [0m[2m│   [0mmain()                                                                      [31m [0m
@@ -385,7 +385,7 @@
 [31m [0m   [2m106 [0m[2m│   [0m[94melif[0m page == [33m"[0m[33mWind AI Simulator[0m[33m"[0m:                                          [31m [0m
 [31m [0m   [2m107 [0m[2m│   │   [0mrender_wind_simulation_page()                                          [31m [0m
 [31m [0m   [2m108 [0m[2m│   [0m[94melse[0m:                                                                      [31m [0m
-[31m [0m [31m❱ [0m109 [2m│   │   [0mrender_fault_detection_page()                                          [31m [0m
+[31m [0m [31m [0m109 [2m│   │   [0mrender_fault_detection_page()                                          [31m [0m
 [31m [0m   [2m110 [0m                                                                               [31m [0m
 [31m [0m   [2m111 [0m                                                                               [31m [0m
 [31m [0m   [2m112 [0m[94mdef[0m[90m [0m[92mrender_map_page[0m():                                                         [31m [0m
@@ -396,7 +396,7 @@
 [31m [0m   [2m148 [0m[2m│   │   [0m[94mfor[0m f [95min[0m factories:                                                    [31m [0m
 [31m [0m   [2m149 [0m[2m│   │   │   [0mnode_status[f[[33m"[0m[33mfactory_id[0m[33m"[0m]] = {                                   [31m [0m
 [31m [0m   [2m150 [0m[2m│   │   │   │   [0m[33m"[0m[33mvoltage[0m[33m"[0m: f[[33m"[0m[33mbattery[0m[33m"[0m][[33m"[0m[33mvoltage[0m[33m"[0m],                            [31m [0m
-[31m [0m [31m❱ [0m151 [2m│   │   │   │   [0m[33m"[0m[33mstatus[0m[33m"[0m: f[[33m"[0m[33mfault[0m[33m"[0m][[33m"[0m[33mclass[0m[33m"[0m]                                  [31m [0m
+[31m [0m [31m [0m151 [2m│   │   │   │   [0m[33m"[0m[33mstatus[0m[33m"[0m: f[[33m"[0m[33mfault[0m[33m"[0m][[33m"[0m[33mclass[0m[33m"[0m]                                  [31m [0m
 [31m [0m   [2m152 [0m[2m│   │   │   [0m}                                                                  [31m [0m
 [31m [0m   [2m153 [0m[2m│   │   │   [0m[2m# For factories, their internal nodes are also monitored by the en[0m [31m [0m
 [31m [0m   [2m154 [0m[2m│   │   │   [0m[2m# mapping them to the main status[0m                                  [31m [0m
@@ -434,7 +434,7 @@ Series.fillna with 'method' is deprecated and will raise in a future version. Us
 [31m [0m   [2m13 [0m[2m│   [0mrender_dashboard()                                                          [31m [0m
 [31m [0m   [2m14 [0m                                                                                [31m [0m
 [31m [0m   [2m15 [0m[94mif[0m [91m__name__[0m == [33m"[0m[33m__main__[0m[33m"[0m:                                                      [31m [0m
-[31m [0m [31m❱ [0m16 [2m│   [0mmain()                                                                      [31m [0m
+[31m [0m [31m [0m16 [2m│   [0mmain()                                                                      [31m [0m
 [31m [0m   [2m17 [0m                                                                                [31m [0m
 [31m [0m                                                                                      [31m [0m
 [31m [0m [2m/home/mersel/Documents/Projects/Weather/[0m[1mmain.py[0m:13 in main                           [31m [0m
@@ -442,7 +442,7 @@ Series.fillna with 'method' is deprecated and will raise in a future version. Us
 [31m [0m   [2m10 [0m[94mdef[0m[90m [0m[92mmain[0m():                                                                     [31m [0m
 [31m [0m   [2m11 [0m[2;90m│   [0m[33m"""Run the application."""[0m                                                  [31m [0m
 [31m [0m   [2m12 [0m[2m│   [0minit_page_config()                                                          [31m [0m
-[31m [0m [31m❱ [0m13 [2m│   [0mrender_dashboard()                                                          [31m [0m
+[31m [0m [31m [0m13 [2m│   [0mrender_dashboard()                                                          [31m [0m
 [31m [0m   [2m14 [0m                                                                                [31m [0m
 [31m [0m   [2m15 [0m[94mif[0m [91m__name__[0m == [33m"[0m[33m__main__[0m[33m"[0m:                                                      [31m [0m
 [31m [0m   [2m16 [0m[2m│   [0mmain()                                                                      [31m [0m
@@ -452,7 +452,7 @@ Series.fillna with 'method' is deprecated and will raise in a future version. Us
 [31m [0m   [2m102 [0m[2m│   [0m[94mif[0m page == [33m"[0m[33mMap Overview[0m[33m"[0m:                                                 [31m [0m
 [31m [0m   [2m103 [0m[2m│   │   [0mrender_map_page()                                                      [31m [0m
 [31m [0m   [2m104 [0m[2m│   [0m[94melif[0m page == [33m"[0m[33mSolar AI Simulator[0m[33m"[0m:                                         [31m [0m
-[31m [0m [31m❱ [0m105 [2m│   │   [0mrender_simulation_page()                                               [31m [0m
+[31m [0m [31m [0m105 [2m│   │   [0mrender_simulation_page()                                               [31m [0m
 [31m [0m   [2m106 [0m[2m│   [0m[94melif[0m page == [33m"[0m[33mWind AI Simulator[0m[33m"[0m:                                          [31m [0m
 [31m [0m   [2m107 [0m[2m│   │   [0mrender_wind_simulation_page()                                          [31m [0m
 [31m [0m   [2m108 [0m[2m│   [0m[94melse[0m:                                                                      [31m [0m
@@ -463,7 +463,7 @@ Series.fillna with 'method' is deprecated and will raise in a future version. Us
 [31m [0m   [2m231 [0m[2m│   │   │   │   [0mst.metric([33m"[0m[33mModel MAE (Mean Absolute Error)[0m[33m"[0m, [33mf[0m[33m"[0m[33m{[0mmae[33m:[0m[33m.2f[0m[33m}[0m[33m kW[0m[33m"[0m)  [31m [0m
 [31m [0m   [2m232 [0m[2m│   │   │   [0m[94melse[0m:                                                              [31m [0m
 [31m [0m   [2m233 [0m[2m│   │   │   │   [0mst.warning([33m"[0m[33mCould not reach AI API. Using simulation data only[0m [31m [0m
-[31m [0m [31m❱ [0m234 [2m│   │   │   │   [0mst.line_chart(df.set_index([33m'[0m[33mtimestamp[0m[33m'[0m)[[[33m'[0m[33mtheoretical_power[0m[33m'[0m,  [31m [0m
+[31m [0m [31m [0m234 [2m│   │   │   │   [0mst.line_chart(df.set_index([33m'[0m[33mtimestamp[0m[33m'[0m)[[[33m'[0m[33mtheoretical_power[0m[33m'[0m,  [31m [0m
 [31m [0m   [2m235 [0m                                                                               [31m [0m
 [31m [0m   [2m236 [0m                                                                               [31m [0m
 [31m [0m   [2m237 [0m[94mdef[0m[90m [0m[92mrender_wind_simulation_page[0m():                                             [31m [0m
@@ -474,7 +474,7 @@ Series.fillna with 'method' is deprecated and will raise in a future version. Us
 [31m [0m   [2m 4116 [0m[2m│   │   [0m[94melse[0m:                                                                [31m [0m
 [31m [0m   [2m 4117 [0m[2m│   │   │   [0m[94mif[0m is_iterator(key):                                             [31m [0m
 [31m [0m   [2m 4118 [0m[2m│   │   │   │   [0mkey = [96mlist[0m(key)                                              [31m [0m
-[31m [0m [31m❱ [0m 4119 [2m│   │   │   [0mindexer = [96mself[0m.columns._get_indexer_strict(key, [33m"[0m[33mcolumns[0m[33m"[0m)[[94m1[0m]    [31m [0m
+[31m [0m [31m [0m 4119 [2m│   │   │   [0mindexer = [96mself[0m.columns._get_indexer_strict(key, [33m"[0m[33mcolumns[0m[33m"[0m)[[94m1[0m]    [31m [0m
 [31m [0m   [2m 4120 [0m[2m│   │   [0m                                                                     [31m [0m
 [31m [0m   [2m 4121 [0m[2m│   │   [0m[2m# take() does not accept boolean indexers[0m                            [31m [0m
 [31m [0m   [2m 4122 [0m[2m│   │   [0m[94mif[0m [96mgetattr[0m(indexer, [33m"[0m[33mdtype[0m[33m"[0m, [94mNone[0m) == [96mbool[0m:                          [31m [0m
@@ -485,7 +485,7 @@ Series.fillna with 'method' is deprecated and will raise in a future version. Us
 [31m [0m   [2m6209 [0m[2m│   │   [0m[94melse[0m:                                                                 [31m [0m
 [31m [0m   [2m6210 [0m[2m│   │   │   [0mkeyarr, indexer, new_indexer = [96mself[0m._reindex_non_unique(keyarr)   [31m [0m
 [31m [0m   [2m6211 [0m[2m│   │   [0m                                                                      [31m [0m
-[31m [0m [31m❱ [0m6212 [2m│   │   [0m[96mself[0m._raise_if_missing(keyarr, indexer, axis_name)                    [31m [0m
+[31m [0m [31m [0m6212 [2m│   │   [0m[96mself[0m._raise_if_missing(keyarr, indexer, axis_name)                    [31m [0m
 [31m [0m   [2m6213 [0m[2m│   │   [0m                                                                      [31m [0m
 [31m [0m   [2m6214 [0m[2m│   │   [0mkeyarr = [96mself[0m.take(indexer)                                           [31m [0m
 [31m [0m   [2m6215 [0m[2m│   │   [0m[94mif[0m [96misinstance[0m(key, Index):                                            [31m [0m
@@ -496,7 +496,7 @@ Series.fillna with 'method' is deprecated and will raise in a future version. Us
 [31m [0m   [2m6261 [0m[2m│   │   │   │   [0m[94mraise[0m [96mKeyError[0m([33mf[0m[33m"[0m[33mNone of [[0m[33m{[0mkey[33m}[0m[33m] are in the [[0m[33m{[0maxis_name[33m}[0m[33m][0m[33m"[0m)   [31m [0m
 [31m [0m   [2m6262 [0m[2m│   │   │   [0m                                                                  [31m [0m
 [31m [0m   [2m6263 [0m[2m│   │   │   [0mnot_found = [96mlist[0m(ensure_index(key)[missing_mask.nonzero()[[94m0[0m]].uni [31m [0m
-[31m [0m [31m❱ [0m6264 [2m│   │   │   [0m[94mraise[0m [96mKeyError[0m([33mf[0m[33m"[0m[33m{[0mnot_found[33m}[0m[33m not in index[0m[33m"[0m)                       [31m [0m
+[31m [0m [31m [0m6264 [2m│   │   │   [0m[94mraise[0m [96mKeyError[0m([33mf[0m[33m"[0m[33m{[0mnot_found[33m}[0m[33m not in index[0m[33m"[0m)                       [31m [0m
 [31m [0m   [2m6265 [0m[2m│   [0m                                                                          [31m [0m
 [31m [0m   [2m6266 [0m[2m│   [0m[1;95m@overload[0m                                                                 [31m [0m
 [31m [0m   [2m6267 [0m[2m│   [0m[94mdef[0m[90m [0m[92m_get_indexer_non_comparable[0m(                                          [31m [0m

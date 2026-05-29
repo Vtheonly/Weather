@@ -8,7 +8,7 @@ def init_page_config():
     """Initialize Streamlit page configuration."""
     st.set_page_config(
         page_title="Algeria Renewable Energy Forecast",
-        page_icon="🌞",
+        page_icon="",
         layout="wide",
         initial_sidebar_state="expanded"
     )

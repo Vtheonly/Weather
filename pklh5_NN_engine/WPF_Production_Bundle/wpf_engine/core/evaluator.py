@@ -19,7 +19,7 @@ class Evaluator:
         return (data - self.target_min) / self.target_scale
 
     def evaluate_and_plot(self, test_gen):
-        print("📊 Running Comprehensive Evaluation...")
+        print(" Running Comprehensive Evaluation...")
 
         # 1. Generate Predictions
         # We take a subset of the test generator for visualization (e.g., first 50 batches)
@@ -59,7 +59,7 @@ class Evaluator:
         rmse = np.sqrt(mse)
         r2 = r2_score(y_true_real.flatten(), y_pred_real.flatten())
 
-        print(f"\n🏆 FINAL RESULTS:")
+        print(f"\n FINAL RESULTS:")
         print(f"   R² Score: {r2:.4f}")
         print(f"   RMSE:     {rmse:.4f} kW")
         print(f"   MAE:      {mae:.4f} kW")
@@ -121,4 +121,4 @@ class Evaluator:
         plt.savefig(f"{plot_dir}/4_scatter_alignment.png")
         plt.close()
 
-        print(f"🎨 Plots saved to {plot_dir}/")
+        print(f" Plots saved to {plot_dir}/")

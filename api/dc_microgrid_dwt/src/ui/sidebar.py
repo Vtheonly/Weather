@@ -17,7 +17,7 @@ def render_sidebar():
         # --- Logo & Title ---
         st.markdown("""
         <div style="text-align: center; padding: 10px 0;">
-            <h2 style="color: #e94560; margin: 0;">⚡ DC Microgrid</h2>
+            <h2 style="color: #e94560; margin: 0;"> DC Microgrid</h2>
             <p style="color: #8892b0; font-size: 12px; margin: 0;">
                 Wavelet Fault Detection Platform
             </p>
@@ -27,28 +27,28 @@ def render_sidebar():
         st.divider()
 
         # --- System Controls ---
-        st.subheader("🎮 System Control")
+        st.subheader(" System Control")
 
         col1, col2 = st.columns(2)
         with col1:
-            if st.button("▶ Start", key="btn_start", use_container_width=True):
+            if st.button(" Start", key="btn_start", use_container_width=True):
                 start_system()
         with col2:
-            if st.button("⏹ Stop", key="btn_stop", use_container_width=True):
+            if st.button(" Stop", key="btn_stop", use_container_width=True):
                 stop_system()
 
         # Status indicator
         if st.session_state.system_running:
-            st.success("🟢 System Running")
+            st.success(" System Running")
             if st.session_state.dsp_available:
-                st.caption("⚡ C++ DSP Fast Path Active")
+                st.caption(" C++ DSP Fast Path Active")
         else:
-            st.info("⚪ System Stopped")
+            st.info(" System Stopped")
 
         st.divider()
 
         # --- Navigation ---
-        st.subheader("📍 Navigation")
+        st.subheader(" Navigation")
         pages = [
             "Dashboard", "Digital Twin", "Wavelet Inspector",
             "Fault Analysis", "Circuit Designer",
@@ -67,7 +67,7 @@ def render_sidebar():
         st.divider()
 
         # --- Fault Injection ---
-        st.subheader("⚡ Fault Injection")
+        st.subheader(" Fault Injection")
 
         if not st.session_state.system_running:
             st.caption("Start system first to inject faults.")
@@ -91,15 +91,15 @@ def render_sidebar():
 
             col1, col2 = st.columns(2)
             with col1:
-                if st.button("⚡ Inject", key="btn_inject", use_container_width=True):
+                if st.button(" Inject", key="btn_inject", use_container_width=True):
                     props = {"distance": distance}
                     inject_fault(fault_type, severity, location, properties=props)
             with col2:
-                if st.button("🔄 Clear", key="btn_clear", use_container_width=True):
+                if st.button(" Clear", key="btn_clear", use_container_width=True):
                     clear_fault()
 
             if st.session_state.fault_active:
-                st.error(f"🔴 Active: {st.session_state.fault_type}")
+                st.error(f" Active: {st.session_state.fault_type}")
 
         # --- Quick Info ---
         st.divider()

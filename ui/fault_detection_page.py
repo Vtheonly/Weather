@@ -39,10 +39,10 @@ def render_fault_detection_page():
     st.markdown(CUSTOM_CSS, unsafe_allow_html=True)
     
     # ─── Sidebar: System Control & Site Selection ────────────────────────────
-    st.sidebar.markdown("### 🔧 System Control")
+    st.sidebar.markdown("###  System Control")
     
     if not api.check_connection():
-        st.sidebar.error("❌ API Offline")
+        st.sidebar.error(" API Offline")
         st.error("Cannot connect to the Fault Detection backend. Please check if the API is running.")
         return
 
@@ -53,7 +53,7 @@ def render_fault_detection_page():
         return
 
     city_names = [c["name"] for c in cities]
-    selected_city_name = st.sidebar.selectbox("🏙️ Select Region/City", city_names, index=0)
+    selected_city_name = st.sidebar.selectbox(" Select Region/City", city_names, index=0)
     selected_city = next(c for c in cities if c["name"] == selected_city_name)
     
     # Fetch Region State
@@ -65,21 +65,21 @@ def render_fault_detection_page():
         return
 
     factory_ids = [f["factory_id"] for f in factories]
-    selected_factory_id = st.sidebar.selectbox("🏭 Select Specific Site", factory_ids, index=0)
+    selected_factory_id = st.sidebar.selectbox(" Select Specific Site", factory_ids, index=0)
     
     # Control Buttons
     st.sidebar.markdown("---")
     col1, col2 = st.sidebar.columns(2)
-    if col1.button("▶️ Tick", use_container_width=True):
+    if col1.button(" Tick", use_container_width=True):
         api.tick_simulation(selected_city_name)
-    if col2.button("🧹 Clear", use_container_width=True):
+    if col2.button(" Clear", use_container_width=True):
         api.clear_faults(selected_city_name)
 
     # Fault Injection
-    with st.sidebar.expander("🚨 Manual Fault Injection", expanded=False):
+    with st.sidebar.expander(" Manual Fault Injection", expanded=False):
         f_type = st.selectbox("Type", ["LINE_FAULT", "BATTERY_FAULT", "ARC_FAULT"])
         f_severity = st.slider("Severity", 0.0, 1.0, 0.5)
-        if st.button("🔥 Inject Fault", use_container_width=True):
+        if st.button(" Inject Fault", use_container_width=True):
             if api.inject_fault(selected_city_name, selected_factory_id, f_type, f_severity):
                 state_mgr.add_fault_event(selected_factory_id, f_type, f_severity)
                 st.toast( f"Injected {f_type} into {selected_factory_id}")
@@ -93,7 +93,7 @@ def render_fault_detection_page():
     fault_info = api.get_fault_info(selected_city_name)
 
     # ─── Main Dashboard Header ───────────────────────────────────────────────
-    st.markdown(f"## 🛡️ Fault Detection — {selected_city_name} Node")
+    st.markdown(f"##  Fault Detection — {selected_city_name} Node")
     st.markdown(f"**Site Status:** `{current_site_state['fault_class']}` | "
                 f"**Monitoring:** `{selected_factory_id}`")
 
@@ -113,33 +113,33 @@ def render_fault_detection_page():
 
     # ─── Layout: Main Features ───────────────────────────────────────────────
     tab_overview, tab_wavelet, tab_analysis, tab_digital_twin = st.tabs([
-        "📈 Live Status", "🌊 Wavelet Analysis", "📋 Fault Log", "🧩 Digital Twin"
+        " Live Status", " Wavelet Analysis", " Fault Log", " Digital Twin"
     ])
 
     with tab_overview:
         c1, c2 = st.columns([2, 1])
         with c1:
-            st.markdown("#### ⚡ Real-time Voltage Waveform")
+            st.markdown("####  Real-time Voltage Waveform")
             VisualizationComponent.render_voltage_waveform(current_site_state["voltage_history"])
         with c2:
-            st.markdown("#### 🔋 Battery Telemetry")
+            st.markdown("####  Battery Telemetry")
             GaugeComponent.render_soc_gauge(current_site_state["current_soc"], "Storage SoC")
             GaugeComponent.render_speedometer(current_site_state["current_temperature"], "Temp", 0, 100, "°C")
             GaugeComponent.render_fault_badge(current_site_state["fault_class"], current_site_state["fault_confidence"])
 
     with tab_wavelet:
-        st.markdown("#### 🌊 Sub-band Energy Distribution (D1-D4, A4)")
+        st.markdown("####  Sub-band Energy Distribution (D1-D4, A4)")
         VisualizationComponent.render_dwt_energy_spectrum(current_site_state["detector_state"])
         st.info("The DWT energy spectrum highlights high-frequency transients typical of line faults and sensor drifting.")
 
     with tab_analysis:
-        st.markdown("#### 📜 historical Event Timeline")
+        st.markdown("####  historical Event Timeline")
         AnalysisComponent.render_timeline(st.session_state.get("fd_fault_events", []))
-        st.markdown("#### 🔍 Structural Classification Details")
+        st.markdown("####  Structural Classification Details")
         AnalysisComponent.render_analysis_details(current_site_state.get("analysis", {}))
 
     with tab_digital_twin:
-        st.markdown(f"#### 🏗️ Digital Twin — {selected_factory_id} Internal Circuit")
+        st.markdown(f"####  Digital Twin — {selected_factory_id} Internal Circuit")
         # Fetch detailed topology for this specific factory
         circuit_info = api.get_circuit_info(selected_city_name, node_id=selected_factory_id)
         

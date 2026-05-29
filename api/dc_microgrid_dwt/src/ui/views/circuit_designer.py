@@ -12,7 +12,7 @@ def render_circuit_designer():
     """Render the circuit designer page."""
     st.markdown("""
     <div class="page-header">
-        <h2>⚙️ Circuit Designer</h2>
+        <h2> Circuit Designer</h2>
         <p>View and configure the DC microgrid circuit model</p>
     </div>
     """, unsafe_allow_html=True)
@@ -32,7 +32,7 @@ def render_circuit_designer():
         st.metric("Generators", len(circuit.generators))
 
     # --- Bus Table ---
-    st.markdown("#### 🔌 Buses")
+    st.markdown("####  Buses")
     import pandas as pd
     bus_rows = []
     for bus in circuit.buses:
@@ -45,7 +45,7 @@ def render_circuit_designer():
     st.dataframe(pd.DataFrame(bus_rows), use_container_width=True, hide_index=True)
 
     # --- Line Table ---
-    st.markdown("#### 📏 Lines")
+    st.markdown("####  Lines")
     line_rows = []
     for line in circuit.lines:
         line_rows.append({
@@ -59,7 +59,7 @@ def render_circuit_designer():
     st.dataframe(pd.DataFrame(line_rows), use_container_width=True, hide_index=True)
 
     # --- Generator Table ---
-    st.markdown("#### ⚡ Generators")
+    st.markdown("####  Generators")
     gen_rows = []
     for gen in circuit.generators:
         gen_rows.append({
@@ -70,7 +70,7 @@ def render_circuit_designer():
     st.dataframe(pd.DataFrame(gen_rows), use_container_width=True, hide_index=True)
 
     # --- Load Table ---
-    st.markdown("#### 🏭 Loads")
+    st.markdown("####  Loads")
     load_rows = []
     for load in circuit.loads:
         load_rows.append({

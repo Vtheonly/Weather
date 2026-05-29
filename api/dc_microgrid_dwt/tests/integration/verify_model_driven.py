@@ -38,7 +38,7 @@ class TestModelDrivenWorkflow(unittest.TestCase):
         # Read sensor - should be 0.0 because no topology
         val = self.emulator.read()
         self.assertEqual(val, 0.0, "Emulator should output 0.0 without model")
-        print("✅ Empty state confirmed.")
+        print(" Empty state confirmed.")
         
         # 2. Load Model
         print("--- Loading Reference Model ---")
@@ -50,7 +50,7 @@ class TestModelDrivenWorkflow(unittest.TestCase):
         # Read sensor - should be ~400.0 (Base Voltage)
         val = self.emulator.read()
         self.assertGreater(val, 300.0, "Emulator should be active after loading model")
-        print(f"✅ Model loaded. Voltage: {val:.2f}V")
+        print(f" Model loaded. Voltage: {val:.2f}V")
         
         # 3. Inject Fault/Simulate DWT
         # Since we are testing logic, we will bypass the raw signal generation and 
@@ -77,7 +77,7 @@ class TestModelDrivenWorkflow(unittest.TestCase):
         
         self.assertTrue(len(received_locs) > 0, "Should have detected fault location")
         loc = received_locs[0]
-        print(f"✅ Fault Located at {loc.distance_m:.2f}m in {loc.zone}")
+        print(f" Fault Located at {loc.distance_m:.2f}m in {loc.zone}")
         self.assertGreater(loc.distance_m, 400.0)
 
 if __name__ == "__main__":

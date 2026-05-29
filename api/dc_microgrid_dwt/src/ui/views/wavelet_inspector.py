@@ -16,7 +16,7 @@ def render_wavelet_inspector():
     """Render the wavelet inspector page."""
     st.markdown("""
     <div class="page-header">
-        <h2>🔬 Wavelet Inspector</h2>
+        <h2> Wavelet Inspector</h2>
         <p>Real DWT coefficients (Daubechies-4) and energy spectrum analysis</p>
     </div>
     """, unsafe_allow_html=True)
@@ -39,7 +39,7 @@ def render_wavelet_inspector():
 
 def _render_coefficient_plots():
     """Render actual DWT coefficient waveforms (D1-D4, A4)."""
-    st.markdown("#### 📈 DWT Coefficients")
+    st.markdown("####  DWT Coefficients")
 
     # Get real coefficients from C++ DSP or Python pipeline
     coefficients = _get_real_coefficients()
@@ -86,7 +86,7 @@ def _render_coefficient_plots():
 
 def _render_energy_history():
     """Render energy level history over time."""
-    st.markdown("#### 📊 Energy History")
+    st.markdown("####  Energy History")
 
     history = st.session_state.get("energy_history", [])
     if not history:
@@ -118,7 +118,7 @@ def _render_energy_history():
 
 def _render_ai_diagnosis():
     """Render AI fault diagnosis results."""
-    st.markdown("#### 🤖 AI Diagnosis")
+    st.markdown("####  AI Diagnosis")
 
     diagnosis = st.session_state.get("ai_diagnosis")
     causes = st.session_state.get("ai_probable_causes", [])

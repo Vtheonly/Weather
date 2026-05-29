@@ -55,7 +55,7 @@ class TestMatlabBridge(unittest.TestCase):
         self.assertEqual(l1.to_bus, 2)
         self.assertAlmostEqual(l1.r_ohm, 0.5)
 
-        print("✅ Round-trip test passed!")
+        print(" Round-trip test passed!")
 
 if __name__ == "__main__":
     unittest.main()
